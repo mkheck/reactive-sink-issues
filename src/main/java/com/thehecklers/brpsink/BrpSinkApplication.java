@@ -1,6 +1,7 @@
 package com.thehecklers.brpsink;
 
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -28,7 +29,8 @@ class MessageSink {
     }
 }
 
-@Value
+@Data
+@AllArgsConstructor
 class Subscriber {
     private final String id, firstName, lastName;
     private final Instant subscribeDate;
